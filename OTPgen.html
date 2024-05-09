@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="total">
+        <h1 id="h11">OTP</h1>
+        <button id="btn">Generate OTP</button>
+    </div>
+    <script>
+        let body=document.body
+        body.style.display="flex"
+        body.style.alignItems="center"
+        body.style.justifyContent="center"
+        body.style.backgroundColor="white"
+        body.style.marginTop="100px"
+
+        let div=document.getElementById("total")
+        div.style.height="500px"
+        div.style.width="400px"
+        div.style.backgroundColor="rgb(0,256,256)"
+        div.style.display="grid"
+        div.style.alignItems="center"
+        div.style.justifyContent="center"
+        div.style.border="1px solid black"
+        div.style.borderRadius="40px"
+
+        let btn=document.getElementById("btn")
+        btn.style.fontSize="20px"
+        btn.style.marginBottom="50px"
+
+        let h11=document.getElementById("h11")
+       h11.style.marginLeft="20px"
+       h11.style.fontSize="50px"
+        
+
+        btn.addEventListener("click",()=>
+    {
+       let otp=Math.ceil(Math.random()*10000)
+
+       if(otp>1000){
+        h11.innerHTML=otp
+       }
+        let red=Math.ceil(Math.random()*256)
+        let green=Math.ceil(Math.random()*256)
+        let blue=Math.ceil(Math.random()*256)
+        let clrs="rgb("+red+','+blue+','+green+")"
+        div.style.backgroundColor=clrs
+       
+    })
+    </script>
+</body>
+</html>
+
+<!-- let red=Math.random()*256
+let green=Math.random()*256
+let blue=Math.random()*256
+let rgb="rgb("+red+","+green+","+blue+")" -->
